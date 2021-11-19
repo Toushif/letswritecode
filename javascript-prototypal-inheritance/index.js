@@ -20,4 +20,4 @@ var polar = new Bear('polar')
 
 
 //grizzly.growl = function() { console.log('override') }
-console.log(grizzly.growl())
+grizzly.growl()
