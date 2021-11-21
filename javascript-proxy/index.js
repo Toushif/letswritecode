@@ -3,7 +3,7 @@ let bears = { grizzly: true }
 let grizzlyCount = 0
 
 const proxyBears = new Proxy(bears, {
-  get: function (target, prop, receiver) {
+  get: function (target, prop, receiver) { // receiver is the proxy object itself, which is proxyBears
     if (prop === 'grizzly') grizzlyCount++
     return Reflect.get(target, prop, receiver) //instead of returning target[prop] we can use Reflect like this
     // return target[prop]
